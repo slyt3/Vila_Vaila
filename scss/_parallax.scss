@@ -1,0 +1,54 @@
+// ============================================================
+// PARALLAX BANNER — Vila Vaila
+// ============================================================
+
+.parallax-banner {
+  position: relative;
+  height: clamp(280px, 40vw, 520px);
+  overflow: hidden;
+
+  &__img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -20%;
+    width: 100%;
+    height: 140%;
+    object-fit: cover;
+    object-position: center;
+    will-change: transform;
+  }
+
+  &__overlay {
+    @include absolute-fill;
+    background: rgba($dark, 0.6);
+    z-index: 1;
+  }
+
+  &__content {
+    @include absolute-fill;
+    @include flex-center;
+    z-index: 2;
+    padding: $sp-8 $container-pad;
+    text-align: center;
+  }
+
+  &__quote {
+    font-family: $font-display;
+    font-size: clamp(1.4rem, 3.5vw, 2.6rem);
+    font-weight: 300;
+    font-style: italic;
+    color: $cream;
+    max-width: 60ch;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity $t-slow, transform $t-slow;
+
+    &.is-revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

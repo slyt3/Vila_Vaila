@@ -1,0 +1,66 @@
+// ============================================================
+// ANIMATIONS — Vila Vaila
+// ============================================================
+
+// ── Scroll-reveal classes (driven by JS IntersectionObserver) ─
+.reveal-up,
+.reveal-fade {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition:
+    opacity  $t-slow,
+    transform $t-slow;
+}
+
+.reveal-up   { transform: translateY(48px); }
+.reveal-fade { transform: translateY(16px); }
+
+.is-revealed {
+  opacity: 1 !important;
+  transform: translate(0) !important;
+}
+
+// Stagger siblings
+@for $i from 1 through 10 {
+  .reveal-up:nth-child(#{$i}),
+  .reveal-fade:nth-child(#{$i}) {
+    transition-delay: #{($i - 1) * 0.08}s;
+  }
+}
+
+// Explicit delay helpers
+@for $i from 1 through 6 {
+  .reveal-delay-#{$i} {
+    transition-delay: #{$i * 0.1}s !important;
+  }
+}
+
+// ── Keyframes ────────────────────────────────────────────────
+@keyframes kenburns {
+  0%   { transform: scale(1.12) translate(0.5%, 0.5%); }
+  100% { transform: scale(1.0)  translate(-0.5%, -0.5%); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.25; transform: scaleY(0.5); }
+  50%       { opacity: 1;    transform: scaleY(1); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+
+@keyframes rotateSlow {
+  to { transform: rotate(360deg); }
+}
+
+// ── Page load fade ───────────────────────────────────────────
+.page-enter {
+  animation: fadeIn 0.6s $ease-quart forwards;
+}

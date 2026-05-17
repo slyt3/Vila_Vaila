@@ -1,0 +1,122 @@
+// ============================================================
+// GALLERY PREVIEW — Vila Vaila
+// ============================================================
+
+.gallery-preview {
+  background: $dark;
+  @include section-pad;
+  overflow: hidden;
+
+  &__header {
+    @include container;
+    margin-bottom: $sp-12;
+  }
+
+  &__title {
+    font-size: $fs-4xl;
+    color: $cream;
+  }
+
+  // ── Grid ─────────────────────────────────────────────────
+  &__grid {
+    @include container;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: $sp-3;
+
+    @include respond(md) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: $sp-4;
+    }
+
+    @include respond(xl) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 280px);
+    }
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: $dark-warm;
+    aspect-ratio: 4/3;
+
+    @include respond(xl) {
+      aspect-ratio: unset;
+    }
+
+    img {
+      @include img-cover;
+      transition: transform 0.8s $ease-expo;
+    }
+
+    &::after {
+      content: '';
+      @include absolute-fill;
+      background: rgba($dark, 0.22);
+      transition: background $t-base;
+    }
+
+    @include hover {
+      img { transform: scale(1.07); }
+
+      &::after { background: rgba($dark, 0.08); }
+
+      .gallery-preview__caption {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    // Spanning variants
+    &--wide {
+      @include respond(xl) {
+        grid-column: span 2;
+      }
+    }
+
+    &--tall {
+      @include respond(xl) {
+        grid-row: span 2;
+      }
+    }
+
+    &--feature {
+      @include respond(xl) {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: $sp-6;
+    background: linear-gradient(to top, rgba($dark, 0.9), transparent);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity $t-base, transform $t-base;
+
+    span {
+      font-size: $fs-sm;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $cream;
+    }
+  }
+
+  // ── Footer link ──────────────────────────────────────────
+  &__footer {
+    @include container;
+    display: flex;
+    justify-content: center;
+    margin-top: $sp-12;
+  }
+}

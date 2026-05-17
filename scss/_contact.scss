@@ -1,0 +1,159 @@
+// ============================================================
+// CONTACT / BOOKING — Vila Vaila
+// ============================================================
+
+.contact {
+  background: $dark-warm;
+  @include section-pad;
+
+  &__container {
+    @include container;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $sp-16;
+
+    @include respond(lg) {
+      grid-template-columns: 1fr 1.2fr;
+      gap: clamp(4rem, 7vw, 8rem);
+      align-items: start;
+    }
+  }
+
+  // ── Info column ──────────────────────────────────────────
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-size: $fs-4xl;
+    color: $cream;
+    margin-bottom: $sp-6;
+  }
+
+  &__body {
+    font-size: $fs-base;
+    color: rgba($cream, 0.55);
+    margin-bottom: $sp-10;
+    max-width: 42ch;
+    line-height: 1.8;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: $sp-6;
+    width: 100%;
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+    gap: $sp-1;
+    padding-bottom: $sp-6;
+    border-bottom: 1px solid $border-light;
+  }
+
+  &__detail-label {
+    font-size: $fs-xs;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: $gold;
+  }
+
+  &__detail-value {
+    font-size: $fs-base;
+    color: rgba($cream, 0.75);
+    transition: color $t-fast;
+
+    @include hover {
+      color: $cream;
+    }
+  }
+
+  // ── Form ─────────────────────────────────────────────────
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: $sp-5;
+  }
+}
+
+.form {
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $sp-5;
+
+    @include respond(sm) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: $sp-2;
+
+    label {
+      font-size: $fs-xs;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba($cream, 0.5);
+    }
+
+    input,
+    textarea,
+    select {
+      background: rgba($cream, 0.04);
+      border: 1px solid rgba($cream, 0.12);
+      color: $cream;
+      padding: $sp-4 $sp-5;
+      font-size: $fs-sm;
+      font-weight: 300;
+      transition: border-color $t-fast, background $t-fast;
+      width: 100%;
+
+      &::placeholder {
+        color: rgba($cream, 0.25);
+      }
+
+      &:focus {
+        border-color: rgba($gold, 0.6);
+        background: rgba($cream, 0.06);
+      }
+
+      // Date input color fix
+      &[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(0.5);
+        cursor: pointer;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+  }
+
+  &__note {
+    font-size: $fs-xs;
+    color: rgba($cream, 0.3);
+    text-align: center;
+    margin-top: $sp-2;
+    letter-spacing: 0.04em;
+  }
+
+  &__success {
+    display: none;
+    text-align: center;
+    padding: $sp-8;
+    color: $gold-light;
+    font-family: $font-display;
+    font-size: $fs-2xl;
+    font-style: italic;
+  }
+}

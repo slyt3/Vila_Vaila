@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vila Vaila photo gallery — explore every corner of the estate through all seasons.">
+  <title>Gallery — Vila Vaila Private Estate</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">Vila <em>Vaila</em></a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html#about"    class="nav__link">About</a></li>
+        <li><a href="gallery.html"        class="nav__link">Gallery</a></li>
+        <li><a href="index.html#amenities" class="nav__link">Amenities</a></li>
+        <li><a href="index.html#contact"  class="nav__link">Contact</a></li>
+        <li><a href="index.html#contact"  class="nav__book">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true">
+    <a href="index.html#about" onclick="closeNav()">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="index.html#amenities" onclick="closeNav()">Amenities</a>
+    <a href="index.html#contact"   onclick="closeNav()">Contact</a>
+    <a href="index.html#contact" class="nav-overlay__book" onclick="closeNav()">Book Now</a>
+  </div>
+
+
+  <!-- GALLERY PAGE -->
+  <main class="gallery-page">
+
+    <div class="gallery-page__header">
+      <span class="gallery-page__eyebrow reveal-up">Vila Vaila</span>
+      <h1 class="gallery-page__title reveal-up">Gallery</h1>
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="gallery-page__filters" role="tablist" aria-label="Filter gallery">
+      <button class="gallery-page__filter is-active" data-filter="all"      role="tab" aria-selected="true">All</button>
+      <button class="gallery-page__filter"           data-filter="exterior" role="tab" aria-selected="false">Exterior</button>
+      <button class="gallery-page__filter"           data-filter="interior" role="tab" aria-selected="false">Interior</button>
+      <button class="gallery-page__filter"           data-filter="outdoor"  role="tab" aria-selected="false">Outdoors</button>
+      <button class="gallery-page__filter"           data-filter="nature"   role="tab" aria-selected="false">Nature</button>
+    </div>
+
+    <!-- Masonry grid — all 41 photos (4–44) -->
+    <div class="gallery-page__grid" id="galleryGrid">
+
+      <!-- Exterior -->
+      <div class="gallery-page__item" data-category="exterior"
+           data-src="Nuotraukos/4.avif" data-caption="Villa Exterior">
+        <img src="Nuotraukos/4.avif"  alt="Villa exterior" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Exterior</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="exterior"
+           data-src="Nuotraukos/5.avif" data-caption="Villa Exterior">
+        <img src="Nuotraukos/5.avif"  alt="Villa exterior" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Exterior</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="exterior"
+           data-src="Nuotraukos/6.avif" data-caption="Villa Exterior">
+        <img src="Nuotraukos/6.avif"  alt="Villa exterior" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Exterior</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="exterior"
+           data-src="Nuotraukos/7.avif" data-caption="Villa Exterior">
+        <img src="Nuotraukos/7.avif"  alt="Villa exterior" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Exterior</span></div>
+      </div>
+
+      <!-- Interior -->
+      <div class="gallery-page__item" data-category="interior"
+           data-src="Nuotraukos/8.avif" data-caption="Interior">
+        <img src="Nuotraukos/8.avif"  alt="Villa interior" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interior</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="interior"
+           data-src="Nuotraukos/9.avif" data-caption="Interior">
+        <img src="Nuotraukos/9.avif"  alt="Villa interior" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interior</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="interior"
+           data-src="Nuotraukos/10.avif" data-caption="Interior">
+        <img src="Nuotraukos/10.avif" alt="Villa interior" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interior</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="interior"
+           data-src="Nuotraukos/11.avif" data-caption="Interior">
+        <img src="Nuotraukos/11.avif" alt="Villa interior" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interior</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="interior"
+           data-src="Nuotraukos/12.avif" data-caption="Interior">
+        <img src="Nuotraukos/12.avif" alt="Villa interior" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interior</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="interior"
+           data-src="Nuotraukos/13.avif" data-caption="Interior">
+        <img src="Nuotraukos/13.avif" alt="Villa interior" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interior</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="interior"
+           data-src="Nuotraukos/14.avif" data-caption="Bedroom">
+        <img src="Nuotraukos/14.avif" alt="Bedroom" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Bedroom</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="interior"
+           data-src="Nuotraukos/15.avif" data-caption="Bedroom">
+        <img src="Nuotraukos/15.avif" alt="Bedroom" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Bedroom</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="interior"
+           data-src="Nuotraukos/16.avif" data-caption="Interior">
+        <img src="Nuotraukos/16.avif" alt="Villa interior" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interior</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="interior"
+           data-src="Nuotraukos/17.avif" data-caption="Interior">
+        <img src="Nuotraukos/17.avif" alt="Villa interior" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interior</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="interior"
+           data-src="Nuotraukos/18.avif" data-caption="Interior">
+        <img src="Nuotraukos/18.avif" alt="Villa interior" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interior</span></div>
+      </div>
+
+      <!-- Outdoors / Activities -->
+      <div class="gallery-page__item" data-category="outdoor"
+           data-src="Nuotraukos/19.avif" data-caption="Outdoor Area">
+        <img src="Nuotraukos/19.avif" alt="Outdoor area" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Outdoors</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="outdoor"
+           data-src="Nuotraukos/20.avif" data-caption="Outdoor Area">
+        <img src="Nuotraukos/20.avif" alt="Outdoor area" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Outdoors</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="outdoor"
+           data-src="Nuotraukos/21.avif" data-caption="Outdoor Area">
+        <img src="Nuotraukos/21.avif" alt="Outdoor area" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Outdoors</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="outdoor"
+           data-src="Nuotraukos/22.avif" data-caption="Outdoor Area">
+        <img src="Nuotraukos/22.avif" alt="Outdoor area" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Outdoors</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="outdoor"
+           data-src="Nuotraukos/23.avif" data-caption="Outdoor Area">
+        <img src="Nuotraukos/23.avif" alt="Outdoor area" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Outdoors</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="outdoor"
+           data-src="Nuotraukos/24.avif" data-caption="Outdoor Area">
+        <img src="Nuotraukos/24.avif" alt="Outdoor area" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Outdoors</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="outdoor"
+           data-src="Nuotraukos/25.avif" data-caption="Outdoor Area">
+        <img src="Nuotraukos/25.avif" alt="Outdoor area" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Outdoors</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="outdoor"
+           data-src="Nuotraukos/26.avif" data-caption="Terrace">
+        <img src="Nuotraukos/26.avif" alt="Terrace" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Terrace</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="outdoor"
+           data-src="Nuotraukos/27.avif" data-caption="Grounds">
+        <img src="Nuotraukos/27.avif" alt="Estate grounds" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Grounds</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="outdoor"
+           data-src="Nuotraukos/28.avif" data-caption="Grounds">
+        <img src="Nuotraukos/28.avif" alt="Estate grounds" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Grounds</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="outdoor"
+           data-src="Nuotraukos/29.avif" data-caption="Outdoor Space">
+        <img src="Nuotraukos/29.avif" alt="Outdoor space" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Outdoors</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="outdoor"
+           data-src="Nuotraukos/30.avif" data-caption="Outdoor Space">
+        <img src="Nuotraukos/30.avif" alt="Outdoor space" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Outdoors</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="outdoor"
+           data-src="Nuotraukos/31.avif" data-caption="Beach Volleyball Court">
+        <img src="Nuotraukos/31.avif" alt="Beach volleyball court" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Sports Court</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="outdoor"
+           data-src="Nuotraukos/32.avif" data-caption="BBQ Terrace">
+        <img src="Nuotraukos/32.avif" alt="Outdoor BBQ station" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>BBQ Terrace</span></div>
+      </div>
+
+      <!-- Nature -->
+      <div class="gallery-page__item" data-category="nature"
+           data-src="Nuotraukos/33.avif" data-caption="Natural Surroundings">
+        <img src="Nuotraukos/33.avif" alt="Natural surroundings" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Nature</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="nature"
+           data-src="Nuotraukos/34.avif" data-caption="Natural Surroundings">
+        <img src="Nuotraukos/34.avif" alt="Natural surroundings" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Nature</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="nature"
+           data-src="Nuotraukos/35.avif" data-caption="Lake View">
+        <img src="Nuotraukos/35.avif" alt="Lake view" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Lake</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="nature"
+           data-src="Nuotraukos/36.avif" data-caption="Lake View">
+        <img src="Nuotraukos/36.avif" alt="Lake view" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Lake</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="nature"
+           data-src="Nuotraukos/37.avif" data-caption="Forest">
+        <img src="Nuotraukos/37.avif" alt="Forest" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Forest</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="nature"
+           data-src="Nuotraukos/38.avif" data-caption="Forest">
+        <img src="Nuotraukos/38.avif" alt="Forest" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Forest</span></div>
+      </div>
+
+      <!-- Exterior — night & winter -->
+      <div class="gallery-page__item" data-category="exterior"
+           data-src="Nuotraukos/39.avif" data-caption="Villa at Dusk">
+        <img src="Nuotraukos/39.avif" alt="Villa at dusk" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Dusk</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="exterior"
+           data-src="Nuotraukos/40.avif" data-caption="Villa at Night">
+        <img src="Nuotraukos/40.avif" alt="Villa at night" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Night</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="exterior"
+           data-src="Nuotraukos/41.avif" data-caption="Villa in Winter">
+        <img src="Nuotraukos/41.avif" alt="Villa in winter" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Winter</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="nature"
+           data-src="Nuotraukos/42.avif" data-caption="Winter Lake &amp; Forest">
+        <img src="Nuotraukos/42.avif" alt="Winter lake and forest" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Winter Lake</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="interior"
+           data-src="Nuotraukos/43.avif" data-caption="Living Room">
+        <img src="Nuotraukos/43.avif" alt="Living room" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Living Room</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="nature"
+           data-src="Nuotraukos/44.avif" data-caption="Forest Night Trail">
+        <img src="Nuotraukos/44.avif" alt="Forest night trail" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Night Trail</span></div>
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">Vila <em>Vaila</em></a>
+        <p class="footer__tagline">A sanctuary where nature meets refinement.</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Navigate</h4>
+        <a href="index.html#about"      class="footer__link">About</a>
+        <a href="gallery.html"          class="footer__link">Gallery</a>
+        <a href="index.html#amenities"  class="footer__link">Amenities</a>
+        <a href="index.html#contact"    class="footer__link">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Contact</h4>
+        <a href="mailto:info@vilavaila.lt" class="footer__link">info@vilavaila.lt</a>
+        <a href="tel:+37060000000"         class="footer__link">+370 600 00 000</a>
+        <span class="footer__link">Lithuania</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">&copy; 2026 Vila Vaila. All rights reserved.</span>
+      <div class="footer__legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close lightbox"></button>
+    <button class="lightbox__prev"  id="lightboxPrev"  aria-label="Previous photo">&#8592;</button>
+    <button class="lightbox__next"  id="lightboxNext"  aria-label="Next photo">&#8594;</button>
+    <div class="lightbox__img-wrap">
+      <div class="lightbox__loader" id="lightboxLoader"></div>
+      <img src="" alt="" class="lightbox__img" id="lightboxImg">
+    </div>
+    <span class="lightbox__caption" id="lightboxCaption"></span>
+  </div>
+
+
+  <script src="js/animations.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

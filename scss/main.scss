@@ -1,0 +1,29 @@
+// ============================================================
+// MAIN ENTRY — Vila Vaila
+// Import order matters: tokens → utilities → base → components
+// ============================================================
+
+// ── Tokens & utilities ───────────────────────────────────────
+@import 'variables';
+@import 'mixins';
+
+// ── Foundation ───────────────────────────────────────────────
+@import 'reset';
+@import 'base';
+@import 'animations';
+@import 'buttons';
+
+// ── Components ───────────────────────────────────────────────
+@import 'navigation';
+@import 'hero';
+@import 'about';
+@import 'gallery-preview';
+@import 'features';
+@import 'amenities';
+@import 'parallax';
+@import 'contact';
+@import 'footer';
+@import 'lightbox';
+
+// ── Page-specific ────────────────────────────────────────────
+@import 'gallery-page';

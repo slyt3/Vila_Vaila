@@ -1,0 +1,86 @@
+// ============================================================
+// AMENITIES — Vila Vaila
+// ============================================================
+
+.amenities {
+  background: $dark;
+  @include section-pad;
+
+  &__container {
+    @include container;
+  }
+
+  &__header {
+    max-width: 60ch;
+    margin-bottom: $sp-20;
+  }
+
+  &__title {
+    font-size: $fs-4xl;
+    color: $cream;
+    margin-top: $sp-2;
+  }
+
+  // ── Grid ─────────────────────────────────────────────────
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $sp-12;
+    border-top: 1px solid $border-light;
+
+    @include respond(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(xl) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: $sp-16;
+    }
+  }
+
+  &__category {
+    padding-top: $sp-8;
+    border-top: 1px solid rgba($gold, 0.25);
+    margin-top: -1px;
+  }
+
+  &__cat-title {
+    font-family: $font-body;
+    font-size: $fs-xs;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $gold;
+    margin-bottom: $sp-6;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $sp-3;
+  }
+
+  &__item {
+    font-size: $fs-sm;
+    font-weight: 300;
+    color: rgba($cream, 0.65);
+    padding-left: $sp-4;
+    position: relative;
+    transition: color $t-fast;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 1px;
+      background: $gold;
+    }
+
+    @include hover {
+      color: $cream;
+    }
+  }
+}

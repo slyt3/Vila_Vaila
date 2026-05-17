@@ -1,0 +1,79 @@
+// ============================================================
+// BASE STYLES — Vila Vaila
+// ============================================================
+
+body {
+  font-family: $font-body;
+  font-size: $fs-base;
+  color: $text-dark;
+  background-color: $cream;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-display;
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.75;
+  color: $text-mid;
+}
+
+// ── Eyebrow label ────────────────────────────────────────────
+.label {
+  display: inline-block;
+  font-family: $font-body;
+  font-size: $fs-xs;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: $gold;
+  margin-bottom: $sp-4;
+
+  &--light {
+    color: $gold-light;
+  }
+}
+
+// ── Section heading ──────────────────────────────────────────
+.section-title {
+  font-size: $fs-4xl;
+  color: $text-dark;
+}
+
+// ── Divider ──────────────────────────────────────────────────
+.divider {
+  width: 40px;
+  height: 1px;
+  background: $gold;
+  margin-block: $sp-8;
+}
+
+// ── Global scrollbar ─────────────────────────────────────────
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: $dark;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gold;
+  border-radius: $radius-full;
+}
+
+// ── Text selection ───────────────────────────────────────────
+::selection {
+  background: $gold;
+  color: $cream;
+}
+
+// ── Focus visible ────────────────────────────────────────────
+:focus-visible {
+  outline: 2px solid $gold;
+  outline-offset: 4px;
+}

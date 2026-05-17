@@ -1,0 +1,97 @@
+// ============================================================
+// BUTTONS — Vila Vaila
+// ============================================================
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $sp-3;
+  padding: 0.875em 2.25em;
+  font-family: $font-body;
+  font-size: $fs-xs;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color $t-base, border-color $t-base, background $t-base;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-101%);
+    transition: transform $t-slow;
+  }
+
+  @include hover {
+    &::before {
+      transform: translateX(0);
+    }
+  }
+
+  // ── Gold (primary CTA) ───────────────────────────────────
+  &--gold {
+    background: $gold;
+    color: $cream;
+    border-color: $gold;
+
+    &::before {
+      background: $gold-light;
+    }
+
+    @include hover {
+      color: $dark;
+    }
+  }
+
+  // ── Ghost (on dark backgrounds) ─────────────────────────
+  &--ghost {
+    background: transparent;
+    color: $cream;
+    border-color: rgba($cream, 0.35);
+
+    &::before {
+      background: rgba($cream, 0.08);
+    }
+
+    @include hover {
+      border-color: rgba($cream, 0.7);
+    }
+  }
+
+  // ── Dark fill ────────────────────────────────────────────
+  &--dark {
+    background: $dark;
+    color: $cream;
+    border-color: $dark;
+
+    &::before {
+      background: $forest;
+    }
+  }
+
+  // ── Outline on light backgrounds ─────────────────────────
+  &--outline {
+    background: transparent;
+    color: $text-dark;
+    border-color: rgba($text-dark, 0.28);
+
+    &::before {
+      background: $text-dark;
+    }
+
+    @include hover {
+      color: $cream;
+      border-color: $text-dark;
+    }
+  }
+
+  // ── Full-width ───────────────────────────────────────────
+  &--full {
+    width: 100%;
+  }
+}

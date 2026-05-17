@@ -1,0 +1,138 @@
+// ============================================================
+// LIGHTBOX — Vila Vaila
+// ============================================================
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: $z-modal;
+  background: rgba($black, 0.96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s $ease-quart;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  // ── Image wrapper ────────────────────────────────────────
+  &__img-wrap {
+    position: relative;
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+    opacity: 0;
+    transform: scale(0.94);
+    transition: opacity 0.35s $ease-expo, transform 0.35s $ease-expo;
+
+    &.is-loaded {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  // ── Loader ───────────────────────────────────────────────
+  &__loader {
+    position: absolute;
+    inset: 0;
+    @include flex-center;
+
+    &::after {
+      content: '';
+      width: 32px;
+      height: 32px;
+      border: 2px solid rgba($cream, 0.15);
+      border-top-color: $gold;
+      border-radius: $radius-full;
+      animation: rotateSlow 0.8s linear infinite;
+    }
+  }
+
+  // ── Controls ─────────────────────────────────────────────
+  &__close,
+  &__prev,
+  &__next {
+    position: absolute;
+    background: transparent;
+    color: rgba($cream, 0.7);
+    transition: color $t-fast, background $t-fast;
+    z-index: 1;
+    padding: $sp-4;
+    line-height: 1;
+
+    @include hover {
+      color: $cream;
+      background: rgba($cream, 0.06);
+    }
+  }
+
+  &__close {
+    top: $sp-6;
+    right: $sp-6;
+    font-size: 1.75rem;
+    font-weight: 200;
+    width: 48px;
+    height: 48px;
+    @include flex-center;
+    border: 1px solid rgba($cream, 0.15);
+    border-radius: $radius-full;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    &::before { transform: rotate(45deg); }
+    &::after  { transform: rotate(-45deg); }
+  }
+
+  &__prev,
+  &__next {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    width: 52px;
+    height: 52px;
+    @include flex-center;
+    border: 1px solid rgba($cream, 0.12);
+
+    @include respond(lg) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__prev { left:  $sp-4; }
+  &__next { right: $sp-4; }
+
+  // ── Caption ──────────────────────────────────────────────
+  &__caption {
+    position: absolute;
+    bottom: $sp-6;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: $fs-xs;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba($cream, 0.4);
+    white-space: nowrap;
+  }
+}

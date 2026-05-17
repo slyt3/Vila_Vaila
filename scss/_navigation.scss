@@ -1,0 +1,187 @@
+// ============================================================
+// NAVIGATION — Vila Vaila
+// ============================================================
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-nav;
+  padding-block: $sp-6;
+  transition: padding $t-base, background $t-base, transform $t-base, border-color $t-base;
+
+  &--scrolled {
+    padding-block: $sp-4;
+    background: rgba($dark, 0.96);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba($gold, 0.12);
+  }
+
+  &--hidden {
+    transform: translateY(-110%);
+  }
+
+  &__container {
+    @include container;
+    @include flex-between;
+  }
+
+  // ── Logo ─────────────────────────────────────────────────
+  &__logo {
+    font-family: $font-display;
+    font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: $cream;
+    line-height: 1;
+    position: relative;
+    z-index: $z-raised;
+    transition: opacity $t-fast;
+
+    em {
+      font-style: italic;
+      color: $gold-light;
+    }
+
+    @include hover { opacity: 0.8; }
+  }
+
+  // ── Desktop links ────────────────────────────────────────
+  &__links {
+    display: none;
+    align-items: center;
+    gap: $sp-10;
+
+    @include respond(lg) {
+      display: flex;
+    }
+  }
+
+  &__link {
+    font-size: $fs-xs;
+    font-weight: 500;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: rgba($cream, 0.65);
+    transition: color $t-fast;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: $gold;
+      transition: width $t-base;
+    }
+
+    @include hover {
+      color: $cream;
+      &::after { width: 100%; }
+    }
+  }
+
+  &__book {
+    font-size: $fs-xs;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $cream;
+    padding: 0.65em 1.6em;
+    border: 1px solid rgba($gold, 0.5);
+    transition: background $t-base, border-color $t-base, color $t-base;
+
+    @include hover {
+      background: $gold;
+      border-color: $gold;
+      color: $dark;
+    }
+  }
+
+  // ── Hamburger toggle ─────────────────────────────────────
+  &__toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: $sp-2;
+    position: relative;
+    z-index: $z-raised + 10;
+
+    @include respond(lg) {
+      display: none;
+    }
+
+    span {
+      display: block;
+      width: 26px;
+      height: 1.5px;
+      background: $cream;
+      transform-origin: center;
+      transition: transform $t-base, opacity $t-fast;
+    }
+
+    &.is-open {
+      span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
+      span:nth-child(2) { transform: translateY(-8.5px) rotate(-45deg); }
+    }
+  }
+}
+
+// ── Mobile overlay ───────────────────────────────────────────
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: $z-nav - 1;
+  background: $dark;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $sp-8;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity $t-slow;
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  a {
+    font-family: $font-display;
+    font-size: clamp(2rem, 7vw, 4rem);
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    color: rgba($cream, 0.5);
+    transition: color $t-fast, transform $t-base;
+    transform: translateY(16px);
+
+    @include hover { color: $cream; }
+  }
+
+  &.is-open a {
+    color: rgba($cream, 0.75);
+    transform: translateY(0);
+
+    @for $i from 1 through 6 {
+      &:nth-child(#{$i}) {
+        transition-delay: #{$i * 0.055}s;
+      }
+    }
+
+    @include hover { color: $gold-light; }
+  }
+
+  &__book {
+    color: $gold !important;
+    font-style: italic;
+
+    @include hover {
+      color: $gold-light !important;
+    }
+  }
+}

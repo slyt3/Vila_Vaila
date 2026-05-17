@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vila Vaila — privati sodyba ant Bridvaišio ežero kranto Tytuvėnų regioniniame parke. Nuomojamas visas namas su teritorija iki 20 nakvynės vietų.">
+  <title>Vila Vaila — Sodyba prie Bridvaišio ežero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- NAVIGACIJA -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">Vila <em>Vaila</em></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Atidaryti meniu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <ul class="nav__links" role="list">
+        <li><a href="#apie"      class="nav__link">Apie</a></li>
+        <li><a href="#galerija"  class="nav__link">Galerija</a></li>
+        <li><a href="#patogumai" class="nav__link">Patogumai</a></li>
+        <li><a href="#kainos"    class="nav__link">Kainos</a></li>
+        <li><a href="#kontaktai" class="nav__link">Kontaktai</a></li>
+        <li><a href="#kontaktai" class="nav__book">Rezervuoti</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true">
+    <a href="#apie"      onclick="closeNav()">Apie</a>
+    <a href="galerija.html">Galerija</a>
+    <a href="#patogumai" onclick="closeNav()">Patogumai</a>
+    <a href="#kainos"    onclick="closeNav()">Kainos</a>
+    <a href="#kontaktai" onclick="closeNav()">Kontaktai</a>
+    <a href="#kontaktai" class="nav-overlay__book" onclick="closeNav()">Rezervuoti</a>
+  </div>
+
+
+  <!-- HERO -->
+  <section class="hero" id="hero" aria-label="Pagrindinis vaizdas">
+    <div class="hero__slides" aria-hidden="true">
+      <div class="hero__slide is-active">
+        <img src="Nuotraukos/40.avif" alt="Vila Vaila nakties vaizdas" loading="eager" fetchpriority="high">
+      </div>
+      <div class="hero__slide">
+        <img src="Nuotraukos/36.avif" alt="Bridvaišio ežeras vasarą" loading="lazy">
+      </div>
+      <div class="hero__slide">
+        <img src="Nuotraukos/5.avif" alt="Vila Vaila vasaros dieną" loading="lazy">
+      </div>
+    </div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Tytuvėnų reg. parkas &middot; Bridvaišio ežeras</p>
+      <h1 class="hero__title">Vila<br><em>Vaila</em></h1>
+      <p class="hero__subtitle">Privati sodyba gamtos apsuptyje — poilsiui ir šventėms</p>
+      <div class="hero__actions">
+        <a href="#kontaktai" class="btn btn--gold">Rezervuoti</a>
+        <a href="#apie"      class="btn btn--ghost">Sužinoti daugiau</a>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <span class="hero__scroll-label">Slinkti</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+    <div class="hero__dots" role="tablist">
+      <button class="hero__dot is-active" data-index="0" role="tab" aria-label="1 skaidrė"></button>
+      <button class="hero__dot" data-index="1" role="tab" aria-label="2 skaidrė"></button>
+      <button class="hero__dot" data-index="2" role="tab" aria-label="3 skaidrė"></button>
+    </div>
+  </section>
+
+
+  <!-- APIE -->
+  <section class="about" id="apie">
+    <div class="about__container">
+      <div class="about__visual">
+        <div class="about__img-main">
+          <img src="Nuotraukos/39.avif" alt="Vila Vaila vakare" loading="lazy">
+        </div>
+        <div class="about__img-accent">
+          <img src="Nuotraukos/5.avif" alt="Vila Vaila išorė" loading="lazy">
+        </div>
+        <div class="about__img-badge" aria-hidden="true">
+          <span>1 ha</span>
+          <small>Plotas</small>
+        </div>
+      </div>
+      <div class="about__content">
+        <span class="label reveal-up">Apie sodybą</span>
+        <h2 class="about__title reveal-up">Gamta,<br>ežeras ir ramybė</h2>
+        <p class="about__body reveal-up">
+          Sodyba įsikūrusi Tytuvėnų regioniniame parke ant Bridvaišio ežero kranto. Nuomojamas visas namas su teritorija — tai privati erdvė poilsiui, šventėms ir nepamirštamiems susibūrimams gamtos apsuptyje.
+        </p>
+        <p class="about__body reveal-up" style="margin-top:-1rem;">
+          Ežeras žuvingas, aplinkui nutiestas 13,5 km dviračių takas aplink du ežerus. Iki Tytuvėnų centro — 1,5 km, iki apžvalgos bokšto — 5 km, iki Šiluvos — 7 km.
+        </p>
+        <div class="about__stats reveal-up">
+          <div class="stat">
+            <span class="stat__number" data-target="20" data-suffix="">0</span>
+            <span class="stat__label">Miegamos vietos</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number" data-target="1" data-suffix=" ha">0</span>
+            <span class="stat__label">Teritorija</span>
+          </div>
+          <div class="stat">
+            <span class="stat__number" data-target="13" data-suffix=" km">0</span>
+            <span class="stat__label">Dviračių takas</span>
+          </div>
+        </div>
+        <a href="galerija.html" class="btn btn--dark reveal-up">Žiūrėti galeriją</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- GALERIJA PERŽIŪRA -->
+  <section class="gallery-preview" id="galerija">
+    <div class="gallery-preview__header">
+      <span class="label label--light reveal-up">Galerija</span>
+      <h2 class="gallery-preview__title reveal-up">Sodyba visais metų laikais</h2>
+    </div>
+    <div class="gallery-preview__grid">
+      <!-- Feature: col 1-2, row 1-2 -->
+      <div class="gallery-preview__item gallery-preview__item--feature"
+           data-src="Nuotraukos/40.avif" data-caption="Sodyba naktį">
+        <img src="Nuotraukos/40.avif" alt="Sodyba naktį" loading="lazy">
+        <div class="gallery-preview__caption"><span>Sodyba naktį</span></div>
+      </div>
+      <!-- Right column stacked: col 3, row 1 -->
+      <div class="gallery-preview__item"
+           data-src="Nuotraukos/4.avif" data-caption="Sodyba — išorė">
+        <img src="Nuotraukos/4.avif" alt="Sodyba išorė" loading="lazy">
+        <div class="gallery-preview__caption"><span>Sodyba</span></div>
+      </div>
+      <!-- Right column stacked: col 3, row 2 -->
+      <div class="gallery-preview__item"
+           data-src="Nuotraukos/25.avif" data-caption="Teritorija">
+        <img src="Nuotraukos/25.avif" alt="Teritorija" loading="lazy">
+        <div class="gallery-preview__caption"><span>Teritorija</span></div>
+      </div>
+      <!-- Bottom row: col 1, row 3 -->
+      <div class="gallery-preview__item"
+           data-src="Nuotraukos/26.avif" data-caption="Teritorija">
+        <img src="Nuotraukos/26.avif" alt="Teritorija" loading="lazy">
+        <div class="gallery-preview__caption"><span>Teritorija</span></div>
+      </div>
+      <!-- Bottom row: col 2, row 3 -->
+      <div class="gallery-preview__item"
+           data-src="Nuotraukos/27.avif" data-caption="Lauko erdvė">
+        <img src="Nuotraukos/27.avif" alt="Lauko erdvė" loading="lazy">
+        <div class="gallery-preview__caption"><span>Lauke</span></div>
+      </div>
+      <!-- Bottom row: col 3, row 3 -->
+      <div class="gallery-preview__item"
+           data-src="Nuotraukos/28.avif" data-caption="Lauko erdvė">
+        <img src="Nuotraukos/28.avif" alt="Lauko erdvė" loading="lazy">
+        <div class="gallery-preview__caption"><span>Lauke</span></div>
+      </div>
+    </div>
+    <div class="gallery-preview__footer">
+      <a href="galerija.html" class="btn btn--ghost">Visos nuotraukos</a>
+    </div>
+  </section>
+
+
+  <!-- PRIVALUMAI -->
+  <section class="features" id="privalumai">
+    <div class="features__container">
+      <div class="features__header">
+        <span class="label reveal-up">Kodėl Vila Vaila</span>
+        <h2 class="features__title reveal-up">Poilsis,<br>kurio nepamirš</h2>
+      </div>
+      <div class="features__grid">
+        <article class="feature reveal-up">
+          <div class="feature__number">01</div>
+          <h3 class="feature__title">Gamta ir ežeras</h3>
+          <p class="feature__body">Sodyba ant Bridvaišio ežero kranto Tytuvėnų regioniniame parke. Žvejyba, valtys, lieptas, 13,5 km dviračių takas aplink du ežerus — gamtos mėgėjai bus patenkinti.</p>
+          <span class="feature__line"></span>
+        </article>
+        <article class="feature reveal-up">
+          <div class="feature__number">02</div>
+          <h3 class="feature__title">Privati erdvė</h3>
+          <p class="feature__body">Nuomojamas visas namas su visa teritorija. Jokių kaimynų — tik jūsų kompanija, jaukus namas su židiniu ir kubilas po žvaigždėtu dangumi.</p>
+          <span class="feature__line"></span>
+        </article>
+        <article class="feature reveal-up">
+          <div class="feature__number">03</div>
+          <h3 class="feature__title">Pramogos visiems</h3>
+          <p class="feature__body">Tinklinio aikštelė smėlyje, kepsninė, vaikų žaidimų aikštelė, grybavimas ir uogavimas — linksmas laikas garantuotas vaikams ir suaugusiems.</p>
+          <span class="feature__line"></span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PATOGUMAI -->
+  <section class="amenities" id="patogumai">
+    <div class="amenities__container">
+      <div class="amenities__header">
+        <span class="label label--light reveal-up">Kas įskaičiuota</span>
+        <h2 class="amenities__title reveal-up">Viskas,<br>ko reikia poilsiui</h2>
+      </div>
+      <div class="amenities__grid">
+        <div class="amenities__category reveal-up">
+          <h3 class="amenities__cat-title">Nakvynė</h3>
+          <ul class="amenities__list">
+            <li class="amenities__item">20 miegamų vietų</li>
+            <li class="amenities__item">Patalynė ir rankšluosčiai</li>
+            <li class="amenities__item">Šildymas kiekviename kambaryje</li>
+            <li class="amenities__item">Tinkleliai nuo vabzdžių</li>
+            <li class="amenities__item">Belaidis internetas</li>
+          </ul>
+        </div>
+        <div class="amenities__category reveal-up">
+          <h3 class="amenities__cat-title">Maistas ir poilsis</h3>
+          <ul class="amenities__list">
+            <li class="amenities__item">Grilis / šašlykinė</li>
+            <li class="amenities__item">Grotelės kepimui ir iešmai</li>
+            <li class="amenities__item">Malkos</li>
+            <li class="amenities__item">Lauko baldai ir terasa</li>
+            <li class="amenities__item">Židinys viduje</li>
+          </ul>
+        </div>
+        <div class="amenities__category reveal-up">
+          <h3 class="amenities__cat-title">Pramogos</h3>
+          <ul class="amenities__list">
+            <li class="amenities__item">Lieptas ir ežero prieiga</li>
+            <li class="amenities__item">Valtys</li>
+            <li class="amenities__item">Žvejyba</li>
+            <li class="amenities__item">Tinklinio aikštelė (smėlis)</li>
+            <li class="amenities__item">Vaikų sporto aikštelė</li>
+            <li class="amenities__item">Dviračių trasos (13,5 km)</li>
+            <li class="amenities__item">Grybavimas / uogavimas</li>
+          </ul>
+        </div>
+        <div class="amenities__category reveal-up">
+          <h3 class="amenities__cat-title">Papildomai</h3>
+          <ul class="amenities__list">
+            <li class="amenities__item">Kubilas su masažu (+ mokestis)</li>
+            <li class="amenities__item">Banketų / konferencijų salė</li>
+            <li class="amenities__item">Vieta automobiliams</li>
+            <li class="amenities__item">Vieta palapinėms</li>
+            <li class="amenities__item">Ilgalaikė nuoma</li>
+            <li class="amenities__item">Atsiskaitymas pavedimu / kortele</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PARALLAX -->
+  <div class="parallax-banner" aria-hidden="true">
+    <img src="Nuotraukos/35.avif" alt="" class="parallax-banner__img" id="parallaxImg" loading="lazy">
+    <div class="parallax-banner__overlay"></div>
+    <div class="parallax-banner__content">
+      <blockquote class="parallax-banner__quote reveal-fade">
+        &bdquo;Vieta, kur laikas sulėtėja, o gamta supa jus kiekvienu metų laiku.&ldquo;
+      </blockquote>
+    </div>
+  </div>
+
+
+  <!-- KAINOS -->
+  <section class="features" id="kainos">
+    <div class="features__container">
+      <div class="features__header">
+        <span class="label reveal-up">Nuomos kainos</span>
+        <h2 class="features__title reveal-up">Skaidrios<br>ir sąžiningos kainos</h2>
+      </div>
+      <div class="features__grid">
+        <article class="feature reveal-up">
+          <div class="feature__number">€</div>
+          <h3 class="feature__title">Namas / visa sodyba</h3>
+          <p class="feature__body">Nuo <strong>400 iki 1&thinsp;000&nbsp;€</strong> per parą — tiek sezono metu (liepa), tiek ne sezono metu.<br><br>Šventinėmis dienomis kainos sutartinės.</p>
+          <span class="feature__line"></span>
+        </article>
+        <article class="feature reveal-up">
+          <div class="feature__number">90€</div>
+          <h3 class="feature__title">Kubilas</h3>
+          <p class="feature__body">Kubilo nuoma iki 10 žmonių — <strong>90&nbsp;€</strong> vakarui.<br><br>Užsakoma atskirai, iš anksto susitariant.</p>
+          <span class="feature__line"></span>
+        </article>
+        <article class="feature reveal-up">
+          <div class="feature__number">20%</div>
+          <h3 class="feature__title">Rezervacija</h3>
+          <p class="feature__body">Avansas — <strong>20%</strong> nuo visos sumos. Nemokamas atšaukimas likus <strong>4 savaitėms</strong> iki atvykimo.<br><br>Depozitas — <strong>300&nbsp;€</strong>.</p>
+          <span class="feature__line"></span>
+        </article>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:3rem;border-top:1px solid rgba(26,22,16,.1);padding-top:2.5rem;">
+        <div>
+          <p style="font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#b89050;font-weight:500;margin-bottom:.5rem;">Atvykimas / Išvykimas</p>
+          <p style="font-size:.9rem;color:#4a4438;line-height:1.7;">Atvykimas nuo <strong>15:00</strong><br>Išvykimas iki <strong>12:00</strong><br>Vėlyvas išvykimas (iki 15:00) mokamas.</p>
+        </div>
+        <div>
+          <p style="font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#b89050;font-weight:500;margin-bottom:.5rem;">Min. nakvynių skaičius</p>
+          <p style="font-size:.9rem;color:#4a4438;line-height:1.7;">Poilsiui — <strong>2 paros</strong><br>Šventėms — <strong>1 para</strong><br>Tik išankstiniams užsakymams.</p>
+        </div>
+        <div>
+          <p style="font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#b89050;font-weight:500;margin-bottom:.5rem;">Apmokėjimas</p>
+          <p style="font-size:.9rem;color:#4a4438;line-height:1.7;">Sąsk.: <strong>LT63 7044 0901 0317 5486</strong><br>AB SEB Bankas · SWIFT: CBVILT2X<br>Pavedimu, grynaisiais ar kortele.</p>
+        </div>
+        <div>
+          <p style="font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#b89050;font-weight:500;margin-bottom:.5rem;">Nuostatai</p>
+          <p style="font-size:.9rem;color:#4a4438;line-height:1.7;">Tyla nuo <strong>22:00</strong> iki <strong>06:00</strong><br>Nerūkoma patalpose.<br>Augintiniai — iš anksto sutarus (mokamai).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- VIETA -->
+  <section class="amenities" id="vieta">
+    <div class="amenities__container">
+      <div class="amenities__header">
+        <span class="label label--light reveal-up">Kaip mus rasti</span>
+        <h2 class="amenities__title reveal-up">Apytiksliai<br>atstumai</h2>
+      </div>
+      <div class="amenities__grid">
+        <div class="amenities__category reveal-up">
+          <h3 class="amenities__cat-title">Aplinkui</h3>
+          <ul class="amenities__list">
+            <li class="amenities__item">Tytuvėnų centras ir vienuolynas — 1,5 km</li>
+            <li class="amenities__item">Apžvalgos bokštas — 5 km</li>
+            <li class="amenities__item">Šiluva — 7 km</li>
+            <li class="amenities__item">Artimiausia parduotuvė — ~1 km</li>
+            <li class="amenities__item">Artimiausia kavinė — ~2 km</li>
+          </ul>
+        </div>
+        <div class="amenities__category reveal-up">
+          <h3 class="amenities__cat-title">Adresas</h3>
+          <ul class="amenities__list">
+            <li class="amenities__item">Ežero g. 3, Rutelių km.</li>
+            <li class="amenities__item">Tytuvėnų sen., LT-86481</li>
+            <li class="amenities__item">Kelmės rajonas</li>
+          </ul>
+        </div>
+        <div class="amenities__category reveal-up">
+          <h3 class="amenities__cat-title">Kontaktai</h3>
+          <ul class="amenities__list">
+            <li class="amenities__item">Tel.: +370 686 19206</li>
+            <li class="amenities__item">vilavaila.prieezero.lt</li>
+            <li class="amenities__item">Kalbame: lietuviškai, angliškai, rusiškai</li>
+            <li class="amenities__item">Dirbame visus metus</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:3rem;aspect-ratio:16/6;min-height:280px;overflow:hidden;">
+        <iframe
+          title="Vila Vaila žemėlapis"
+          src="https://maps.google.com/maps?q=E%C5%BEero+g.+3%2C+Ruteliai%2C+Tytuvėnų+sen.%2C+Kelmės+r.&output=embed"
+          width="100%" height="100%"
+          style="border:0;filter:grayscale(.4) contrast(1.05);"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- KONTAKTAI -->
+  <section class="contact" id="kontaktai">
+    <div class="contact__container">
+      <div class="contact__info">
+        <span class="label label--light reveal-up">Susisiekite</span>
+        <h2 class="contact__title reveal-up">Rezervuokite<br>savo poilsį</h2>
+        <p class="contact__body reveal-up">
+          Norėdami rezervuoti sodybą arba sužinoti daugiau — susisiekite su mumis. Atsakome per 24 val.
+        </p>
+        <div class="contact__details reveal-up">
+          <div class="contact__detail">
+            <span class="contact__detail-label">Telefonas</span>
+            <a href="tel:+37068619206" class="contact__detail-value">+370 686 19206</a>
+          </div>
+          <div class="contact__detail">
+            <span class="contact__detail-label">Adresas</span>
+            <span class="contact__detail-value">Ežero g. 3, Rutelių km., Kelmės r.</span>
+          </div>
+          <div class="contact__detail">
+            <span class="contact__detail-label">Dirbame</span>
+            <span class="contact__detail-value">Visus metus</span>
+          </div>
+        </div>
+      </div>
+      <form class="contact__form" id="contactForm" novalidate>
+        <div class="form__row">
+          <div class="form__group">
+            <label for="name">Vardas ir pavardė</label>
+            <input type="text" id="name" name="name" placeholder="Jūsų vardas" autocomplete="name" required>
+          </div>
+          <div class="form__group">
+            <label for="phone">Telefonas</label>
+            <input type="tel" id="phone" name="phone" placeholder="+370 686 19206" autocomplete="tel">
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__group">
+            <label for="checkin">Atvykimas</label>
+            <input type="date" id="checkin" name="checkin" required>
+          </div>
+          <div class="form__group">
+            <label for="checkout">Išvykimas</label>
+            <input type="date" id="checkout" name="checkout" required>
+          </div>
+        </div>
+        <div class="form__group">
+          <label for="guests">Svečių skaičius</label>
+          <input type="number" id="guests" name="guests" placeholder="1–20" min="1" max="20">
+        </div>
+        <div class="form__group">
+          <label for="occasion">Proga</label>
+          <input type="text" id="occasion" name="occasion" placeholder="Poilsis, gimtadienis, vestuvės...">
+        </div>
+        <div class="form__group">
+          <label for="message">Žinutė</label>
+          <textarea id="message" name="message" rows="4" placeholder="Papildoma informacija, klausimai..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--gold btn--full">Siųsti užklausą</button>
+        <p class="form__note">Paprastai atsakome per 24 val. Rezervacija patvirtinama po 20% avanso.</p>
+        <div class="form__success" id="formSuccess">
+          Ačiū — netrukus susisieksime su Jumis.
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- PORAŠTĖ -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">Vila <em>Vaila</em></a>
+        <p class="footer__tagline">Privati sodyba ant Bridvaišio ežero kranto Tytuvėnų regioniniame parke. Poilsiui ir šventėms visus metus.</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Navigacija</h4>
+        <a href="#apie"         class="footer__link">Apie sodybą</a>
+        <a href="galerija.html" class="footer__link">Galerija</a>
+        <a href="#patogumai"    class="footer__link">Patogumai</a>
+        <a href="#kainos"       class="footer__link">Kainos</a>
+        <a href="#kontaktai"    class="footer__link">Kontaktai</a>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Kontaktai</h4>
+        <a href="tel:+37068619206" class="footer__link">+370 686 19206</a>
+        <a href="https://vilavaila.prieezero.lt" target="_blank" rel="noopener" class="footer__link">vilavaila.prieezero.lt</a>
+        <span class="footer__link">Ežero g. 3, Rutelių km.</span>
+        <span class="footer__link">Kelmės rajonas</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">&copy; 2026 Vila Vaila. Visos teisės saugomos.</span>
+      <div class="footer__legal">
+        <a href="#">Privatumo politika</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Nuotraukų peržiūra" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Uždaryti"></button>
+    <button class="lightbox__prev"  id="lightboxPrev"  aria-label="Ankstesnė">&#8592;</button>
+    <button class="lightbox__next"  id="lightboxNext"  aria-label="Kita">&#8594;</button>
+    <div class="lightbox__img-wrap">
+      <div class="lightbox__loader" id="lightboxLoader"></div>
+      <img src="" alt="" class="lightbox__img" id="lightboxImg">
+    </div>
+    <span class="lightbox__caption" id="lightboxCaption"></span>
+  </div>
+
+  <script src="js/animations.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

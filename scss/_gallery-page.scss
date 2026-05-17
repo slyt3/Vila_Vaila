@@ -1,0 +1,147 @@
+// ============================================================
+// GALLERY PAGE — Vila Vaila
+// ============================================================
+
+.gallery-page {
+  background: $dark;
+  min-height: 100vh;
+
+  // ── Page header ──────────────────────────────────────────
+  &__header {
+    padding-top: calc(100px + $sp-16);
+    padding-bottom: $sp-12;
+    @include container;
+    border-bottom: 1px solid $border-light;
+    margin-bottom: $sp-12;
+  }
+
+  &__eyebrow {
+    display: block;
+    font-size: $fs-xs;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: $gold;
+    margin-bottom: $sp-4;
+  }
+
+  &__title {
+    font-size: $fs-5xl;
+    color: $cream;
+    line-height: 1;
+  }
+
+  // ── Filter tabs ──────────────────────────────────────────
+  &__filters {
+    @include container;
+    display: flex;
+    gap: $sp-3;
+    margin-bottom: $sp-12;
+    flex-wrap: wrap;
+  }
+
+  &__filter {
+    font-size: $fs-xs;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba($cream, 0.4);
+    padding: $sp-2 $sp-6;
+    border: 1px solid rgba($cream, 0.1);
+    cursor: pointer;
+    transition: all $t-base;
+
+    &.is-active {
+      color: $gold;
+      border-color: $gold;
+      background: rgba($gold, 0.08);
+    }
+
+    @include hover {
+      color: $cream;
+      border-color: $gold;
+      background: rgba($gold, 0.08);
+    }
+  }
+
+  // ── Photo grid ───────────────────────────────────────────
+  &__grid {
+    @include container;
+    columns: 2;
+    column-gap: $sp-3;
+    padding-bottom: $sp-20;
+
+    @include respond(md) {
+      columns: 3;
+      column-gap: $sp-4;
+    }
+
+    @include respond(xl) {
+      columns: 4;
+    }
+  }
+
+  &__item {
+    break-inside: avoid;
+    margin-bottom: $sp-3;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: $dark-warm;
+
+    @include respond(md) {
+      margin-bottom: $sp-4;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.8s $ease-expo, opacity 0.4s ease;
+      opacity: 0;
+
+      &.is-loaded {
+        opacity: 1;
+      }
+    }
+
+    &::after {
+      content: '';
+      @include absolute-fill;
+      background: rgba($dark, 0.15);
+      transition: background $t-base;
+    }
+
+    @include hover {
+      img { transform: scale(1.05); }
+      &::after { background: rgba($dark, 0); }
+
+      .gallery-page__item-overlay {
+        opacity: 1;
+      }
+    }
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+
+  &__item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    padding: $sp-5;
+    background: linear-gradient(to top, rgba($dark, 0.85), transparent);
+    opacity: 0;
+    transition: opacity $t-base;
+
+    span {
+      font-size: $fs-xs;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba($cream, 0.8);
+    }
+  }
+}

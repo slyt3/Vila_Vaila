@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vila Vaila nuotraukų galerija — pamatykite sodybą visais metų laikais.">
+  <title>Galerija — Vila Vaila</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- NAVIGACIJA -->
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">Vila <em>Vaila</em></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Atidaryti meniu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html#apie"      class="nav__link">Apie</a></li>
+        <li><a href="galerija.html"        class="nav__link">Galerija</a></li>
+        <li><a href="index.html#patogumai" class="nav__link">Patogumai</a></li>
+        <li><a href="index.html#kainos"    class="nav__link">Kainos</a></li>
+        <li><a href="index.html#kontaktai" class="nav__link">Kontaktai</a></li>
+        <li><a href="index.html#kontaktai" class="nav__book">Rezervuoti</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true">
+    <a href="index.html#apie"      onclick="closeNav()">Apie</a>
+    <a href="galerija.html">Galerija</a>
+    <a href="index.html#patogumai" onclick="closeNav()">Patogumai</a>
+    <a href="index.html#kainos"    onclick="closeNav()">Kainos</a>
+    <a href="index.html#kontaktai" onclick="closeNav()">Kontaktai</a>
+    <a href="index.html#kontaktai" class="nav-overlay__book" onclick="closeNav()">Rezervuoti</a>
+  </div>
+
+
+  <!-- GALERIJA -->
+  <main class="gallery-page">
+
+    <div class="gallery-page__header">
+      <span class="gallery-page__eyebrow reveal-up">Vila Vaila</span>
+      <h1 class="gallery-page__title reveal-up">Galerija</h1>
+    </div>
+
+    <div class="gallery-page__grid" id="galleryGrid">
+
+      <div class="gallery-page__item" data-category="exterior" data-src="Nuotraukos/4.avif" data-caption="Sodyba — išorė">
+        <img src="Nuotraukos/4.avif"  alt="Sodyba išorė" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Išorė</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="exterior" data-src="Nuotraukos/5.avif" data-caption="Sodyba — išorė">
+        <img src="Nuotraukos/5.avif"  alt="Sodyba išorė" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Išorė</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="exterior" data-src="Nuotraukos/6.avif" data-caption="Sodyba — išorė">
+        <img src="Nuotraukos/6.avif"  alt="Sodyba išorė" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Išorė</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="exterior" data-src="Nuotraukos/7.avif" data-caption="Sodyba — išorė">
+        <img src="Nuotraukos/7.avif"  alt="Sodyba išorė" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Išorė</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="interior" data-src="Nuotraukos/8.avif" data-caption="Interjeras">
+        <img src="Nuotraukos/8.avif"  alt="Interjeras" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interjeras</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="interior" data-src="Nuotraukos/9.avif" data-caption="Interjeras">
+        <img src="Nuotraukos/9.avif"  alt="Interjeras" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interjeras</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="interior" data-src="Nuotraukos/10.avif" data-caption="Interjeras">
+        <img src="Nuotraukos/10.avif" alt="Interjeras" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interjeras</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="interior" data-src="Nuotraukos/11.avif" data-caption="Interjeras">
+        <img src="Nuotraukos/11.avif" alt="Interjeras" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interjeras</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="interior" data-src="Nuotraukos/12.avif" data-caption="Interjeras">
+        <img src="Nuotraukos/12.avif" alt="Interjeras" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interjeras</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="interior" data-src="Nuotraukos/13.avif" data-caption="Interjeras">
+        <img src="Nuotraukos/13.avif" alt="Interjeras" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interjeras</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="interior" data-src="Nuotraukos/14.avif" data-caption="Miegamasis">
+        <img src="Nuotraukos/14.avif" alt="Miegamasis" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Miegamasis</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="interior" data-src="Nuotraukos/15.avif" data-caption="Miegamasis">
+        <img src="Nuotraukos/15.avif" alt="Miegamasis" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Miegamasis</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="interior" data-src="Nuotraukos/16.avif" data-caption="Interjeras">
+        <img src="Nuotraukos/16.avif" alt="Interjeras" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interjeras</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="interior" data-src="Nuotraukos/17.avif" data-caption="Interjeras">
+        <img src="Nuotraukos/17.avif" alt="Interjeras" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interjeras</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="interior" data-src="Nuotraukos/18.avif" data-caption="Interjeras">
+        <img src="Nuotraukos/18.avif" alt="Interjeras" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Interjeras</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="outdoor" data-src="Nuotraukos/19.avif" data-caption="Lauko erdvė">
+        <img src="Nuotraukos/19.avif" alt="Lauko erdvė" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Lauke</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="outdoor" data-src="Nuotraukos/20.avif" data-caption="Lauko erdvė">
+        <img src="Nuotraukos/20.avif" alt="Lauko erdvė" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Lauke</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="outdoor" data-src="Nuotraukos/21.avif" data-caption="Lauko erdvė">
+        <img src="Nuotraukos/21.avif" alt="Lauko erdvė" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Lauke</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="outdoor" data-src="Nuotraukos/22.avif" data-caption="Lauko erdvė">
+        <img src="Nuotraukos/22.avif" alt="Lauko erdvė" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Lauke</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="outdoor" data-src="Nuotraukos/23.avif" data-caption="Lauko erdvė">
+        <img src="Nuotraukos/23.avif" alt="Lauko erdvė" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Lauke</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="outdoor" data-src="Nuotraukos/24.avif" data-caption="Terasa">
+        <img src="Nuotraukos/24.avif" alt="Terasa" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Terasa</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="outdoor" data-src="Nuotraukos/25.avif" data-caption="Teritorija">
+        <img src="Nuotraukos/25.avif" alt="Teritorija" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Teritorija</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="outdoor" data-src="Nuotraukos/26.avif" data-caption="Teritorija">
+        <img src="Nuotraukos/26.avif" alt="Teritorija" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Teritorija</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="outdoor" data-src="Nuotraukos/27.avif" data-caption="Teritorija">
+        <img src="Nuotraukos/27.avif" alt="Teritorija" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Teritorija</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="outdoor" data-src="Nuotraukos/28.avif" data-caption="Lauko erdvė">
+        <img src="Nuotraukos/28.avif" alt="Lauko erdvė" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Lauke</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="outdoor" data-src="Nuotraukos/29.avif" data-caption="Lauko erdvė">
+        <img src="Nuotraukos/29.avif" alt="Lauko erdvė" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Lauke</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="outdoor" data-src="Nuotraukos/30.avif" data-caption="Lauko erdvė">
+        <img src="Nuotraukos/30.avif" alt="Lauko erdvė" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Lauke</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="outdoor" data-src="Nuotraukos/31.avif" data-caption="Tinklinio aikštelė">
+        <img src="Nuotraukos/31.avif" alt="Tinklinio aikštelė" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Tinklinis</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="outdoor" data-src="Nuotraukos/32.avif" data-caption="Kepsninė">
+        <img src="Nuotraukos/32.avif" alt="Lauko kepsninė" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Kepsninė</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="nature" data-src="Nuotraukos/33.avif" data-caption="Gamta">
+        <img src="Nuotraukos/33.avif" alt="Gamta" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Gamta</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="nature" data-src="Nuotraukos/34.avif" data-caption="Gamta">
+        <img src="Nuotraukos/34.avif" alt="Gamta" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Gamta</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="nature" data-src="Nuotraukos/35.avif" data-caption="Ežero vaizdas">
+        <img src="Nuotraukos/35.avif" alt="Ežero vaizdas" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Ežeras</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="nature" data-src="Nuotraukos/36.avif" data-caption="Ežero vaizdas">
+        <img src="Nuotraukos/36.avif" alt="Ežero vaizdas" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Ežeras</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="nature" data-src="Nuotraukos/37.avif" data-caption="Miškas">
+        <img src="Nuotraukos/37.avif" alt="Miškas" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Miškas</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="nature" data-src="Nuotraukos/38.avif" data-caption="Miškas">
+        <img src="Nuotraukos/38.avif" alt="Miškas" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Miškas</span></div>
+      </div>
+
+      <div class="gallery-page__item" data-category="exterior" data-src="Nuotraukos/39.avif" data-caption="Sodyba vakare">
+        <img src="Nuotraukos/39.avif" alt="Sodyba vakare" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Vakaras</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="exterior" data-src="Nuotraukos/40.avif" data-caption="Sodyba naktį">
+        <img src="Nuotraukos/40.avif" alt="Sodyba naktį" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Naktis</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="exterior" data-src="Nuotraukos/41.avif" data-caption="Sodyba žiemą">
+        <img src="Nuotraukos/41.avif" alt="Sodyba žiemą" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Žiema</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="nature" data-src="Nuotraukos/42.avif" data-caption="Žiemos ežeras ir miškas">
+        <img src="Nuotraukos/42.avif" alt="Žiemos ežeras" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Žiemos ežeras</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="interior" data-src="Nuotraukos/43.avif" data-caption="Svetainė">
+        <img src="Nuotraukos/43.avif" alt="Svetainė" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Svetainė</span></div>
+      </div>
+      <div class="gallery-page__item" data-category="nature" data-src="Nuotraukos/44.avif" data-caption="Miško takas naktį">
+        <img src="Nuotraukos/44.avif" alt="Miško takas naktį" loading="lazy">
+        <div class="gallery-page__item-overlay"><span>Naktinis takas</span></div>
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- PORAŠTĖ -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">Vila <em>Vaila</em></a>
+        <p class="footer__tagline">Privati sodyba ant Bridvaišio ežero kranto Tytuvėnų regioniniame parke.</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Navigacija</h4>
+        <a href="index.html#apie"      class="footer__link">Apie sodybą</a>
+        <a href="galerija.html"        class="footer__link">Galerija</a>
+        <a href="index.html#patogumai" class="footer__link">Patogumai</a>
+        <a href="index.html#kainos"    class="footer__link">Kainos</a>
+        <a href="index.html#kontaktai" class="footer__link">Kontaktai</a>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Kontaktai</h4>
+        <a href="tel:+37068619206" class="footer__link">+370 686 19206</a>
+        <a href="https://vilavaila.prieezero.lt" target="_blank" rel="noopener" class="footer__link">vilavaila.prieezero.lt</a>
+        <span class="footer__link">Ežero g. 3, Rutelių km.</span>
+        <span class="footer__link">Kelmės rajonas</span>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copy">&copy; 2026 Vila Vaila. Visos teisės saugomos.</span>
+      <div class="footer__legal">
+        <a href="#">Privatumo politika</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Nuotraukų peržiūra" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Uždaryti"></button>
+    <button class="lightbox__prev"  id="lightboxPrev"  aria-label="Ankstesnė">&#8592;</button>
+    <button class="lightbox__next"  id="lightboxNext"  aria-label="Kita">&#8594;</button>
+    <div class="lightbox__img-wrap">
+      <div class="lightbox__loader" id="lightboxLoader"></div>
+      <img src="" alt="" class="lightbox__img" id="lightboxImg">
+    </div>
+    <span class="lightbox__caption" id="lightboxCaption"></span>
+  </div>
+
+  <script src="js/animations.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

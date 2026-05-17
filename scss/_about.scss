@@ -1,0 +1,168 @@
+// ============================================================
+// ABOUT — Vila Vaila
+// ============================================================
+
+.about {
+  background: $cream;
+  @include section-pad;
+  overflow: hidden;
+
+  &__container {
+    @include container;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $sp-16;
+
+    @include respond(lg) {
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(4rem, 7vw, 8rem);
+      align-items: center;
+    }
+  }
+
+  // ── Visual block ─────────────────────────────────────────
+  &__visual {
+    position: relative;
+    height: clamp(380px, 55vw, 640px);
+
+    @include respond(lg) {
+      height: auto;
+      min-height: 580px;
+    }
+  }
+
+  &__img-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 88%;
+    overflow: hidden;
+
+    img {
+      @include img-cover;
+      transition: transform 0.9s $ease-expo;
+    }
+
+    @include hover {
+      img { transform: scale(1.04); }
+    }
+  }
+
+  &__img-accent {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 52%;
+    height: 46%;
+    overflow: hidden;
+    border: 4px solid $cream;
+
+    img {
+      @include img-cover;
+      transition: transform 0.9s $ease-expo;
+    }
+
+    @include hover {
+      img { transform: scale(1.04); }
+    }
+  }
+
+  &__img-badge {
+    position: absolute;
+    top: 52%;
+    left: 72%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 90px;
+    border-radius: $radius-full;
+    background: $gold;
+    @include flex-center;
+    flex-direction: column;
+    text-align: center;
+    z-index: $z-raised;
+
+    @include respond(md) {
+      width: 110px;
+      height: 110px;
+    }
+
+    span {
+      display: block;
+      font-family: $font-display;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: $cream;
+      line-height: 1;
+    }
+
+    small {
+      font-size: 0.55rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba($cream, 0.8);
+    }
+  }
+
+  // ── Text block ───────────────────────────────────────────
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-size: $fs-4xl;
+    color: $text-dark;
+    margin-bottom: $sp-6;
+    line-height: 1.05;
+  }
+
+  &__body {
+    font-size: $fs-base;
+    color: $text-mid;
+    margin-bottom: $sp-10;
+    max-width: 52ch;
+  }
+
+  // ── Stats row ────────────────────────────────────────────
+  &__stats {
+    display: flex;
+    gap: $sp-12;
+    margin-bottom: $sp-12;
+    padding-block: $sp-8;
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+    width: 100%;
+  }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: $sp-1;
+
+  &__number {
+    font-family: $font-display;
+    font-size: $fs-3xl;
+    font-weight: 400;
+    color: $text-dark;
+    line-height: 1;
+
+    &::after {
+      content: attr(data-suffix);
+      font-size: 0.55em;
+      color: $gold;
+      margin-left: 2px;
+    }
+  }
+
+  &__label {
+    font-size: $fs-xs;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: $text-muted;
+  }
+}
